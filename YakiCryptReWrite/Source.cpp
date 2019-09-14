@@ -273,6 +273,7 @@ DType<T> MakeCryptoNumber(const DType<T>& D) {
 			R.push_back(o);
 		}
 	}
+	std::reverse(R.begin(), R.end());
 	return R;
 }
 template<class T,class U>
@@ -310,7 +311,7 @@ DTypeU32 YakiCrypto(const DType<T>& D,const DType<U>& C) {
 #define DefValue
 int main() {
 
-	std::cout << "I am \"YakiCrypto\" the StringCrypter." << std::endl << std::endl;
+	std::cout << "I am \"YakiCrypto\" the Encryptor." << std::endl << std::endl;
 
 	std::string S;
 	std::cout << "Start Input. IF like a freeze. keyin By Input Device." << std::endl;
