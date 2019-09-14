@@ -264,7 +264,7 @@ DType<X>ReversibleHashDecode(const DType<T>& D,const DType<U>& C) {
 }
 
 template<class T>
-DType<T> MakeCryptNumber(const DType<T>& D) {
+DType<T> MakeCryptoNumber(const DType<T>& D) {
 	DType<T> R;
 
 	for (auto& o : D) {
@@ -317,7 +317,7 @@ int main() {
 	std::cout << "Input:";
 	std::getline(std::cin, S);
 	std::cout << std::endl << "...Input Aceppted!" << std::endl;
-	auto C = MakeCryptNumber(DType<std::uint8_t>{S.begin(), S.end()});
+	auto C = MakeCryptoNumber(DType<std::uint8_t>{S.begin(), S.end()});
 
 	DTypeU32 RM = YakiCrypto<std::uint8_t>(DType<std::uint8_t>{S.begin(), S.end()},C);
 
